@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\imagens\**" />
+    <Content Remove="wwwroot\imagens\**" />
+    <EmbeddedResource Remove="wwwroot\imagens\**" />
+    <None Remove="wwwroot\imagens\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
       <PrivateAssets>all</PrivateAssets>
@@ -20,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\imagens\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,13 @@
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.csproj.AssemblyReference.cache
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.AssemblyInfoInputs.cache
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.AssemblyInfo.cs
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.csproj.CoreCompileInputs.cache
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\appsettings.json
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.staticwebassets.runtime.json
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.exe
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.deps.json
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.runtimeconfig.json
@@ -9,9 +17,11 @@ C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\De
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
@@ -49,13 +59,6 @@ C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\De
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.Services.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.Data.pdb
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.Services.pdb
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.csproj.AssemblyReference.cache
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.AssemblyInfoInputs.cache
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.AssemblyInfo.cs
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.csproj.CoreCompileInputs.cache
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\scopedcss\bundle\Demo.Api.styles.css
@@ -64,6 +67,3 @@ C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\De
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\ref\Demo.Api.dll
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.pdb
 C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\obj\Debug\net6.0\Demo.Api.genruntimeconfig.cache
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Humanizer.dll
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api\bin\Debug\net6.0\Demo.Api.staticwebassets.runtime.json

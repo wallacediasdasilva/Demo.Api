@@ -40,12 +40,12 @@ public class ProdutosController : MainController
     {
         if (ModelState.IsValid is false) return CustomResponse(ModelState);
 
-        var imagemNome = Guid.NewGuid() + "_" + produtoViewModel.Imagem;
+        var imagemPrefixo = Guid.NewGuid() + "_";
 
-        if (!UploadArquivo(produtoViewModel.ImagemUpload, imagemNome))
+        if (!await UploadArquivo(produtoViewModel.ImagemUpload, imagemPrefixo))
             return CustomResponse(produtoViewModel);
 
-        produtoViewModel.Imagem = imagemNome;
+        produtoViewModel.Imagem = imagemPrefixo + produtoViewModel.ImagemUpload.FileName;
         await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
 
         return CustomResponse(produtoViewModel);
@@ -67,25 +67,24 @@ public class ProdutosController : MainController
     private async Task<ProdutoViewModel> ObterProduto(Guid id)
         => _mapper.Map<ProdutoViewModel>(await _produtoRepository.ObterProdutoFornecedor(id));
 
-    private bool UploadArquivo(string arquivo, string imgNome)
+    private async Task<bool> UploadArquivo(IFormFile arquivo, string imgPrefixo)
     {
-        if (string.IsNullOrEmpty(arquivo))
+        if (arquivo is null || arquivo.Length == 0)
         {
             NotificarErro("Forneça uma imagem para este produto!");
             return false;
         }
 
-        var imageDataByteArray = Convert.FromBase64String(arquivo);
+        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imgPrefixo + arquivo.FileName);
 
-        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imgNome);
-
-        if (System.IO.File.Exists(filePath))
+        if (System.IO.File.Exists(path))
         {
             NotificarErro("Já existe um arquivo com este nome!");
             return false;
         }
 
-        System.IO.File.WriteAllBytes(filePath, imageDataByteArray);
+        using (var stream = new FileStream(path, FileMode.Create))
+            await arquivo.CopyToAsync(stream);
 
         return true;
     }
