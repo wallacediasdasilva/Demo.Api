@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "KQCE7QDZzVUuGCjVjnmCAIoknO73Rth3iYKs8imsqbA=",
+  "Source": "Demo.Api",
+  "BasePath": "_content/Demo.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Demo.Api\\wwwroot",
+      "Source": "Demo.Api",
+      "ContentRoot": "C:\\Users\\wallsilv\\Documents\\Estudo\\Accelerate\\DEMOS\\API Completa\\Demo.Api\\src\\Demo.Api\\wwwroot\\",
+      "BasePath": "_content/Demo.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

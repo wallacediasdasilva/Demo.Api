@@ -1,0 +1,17 @@
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\Demo.Api.Data.deps.json
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\Demo.Api.Data.runtimeconfig.json
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\Demo.Api.Data.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\ref\Demo.Api.Data.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\Demo.Api.Data.pdb
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\Demo.Api.Services.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\bin\Debug\net6.0\Demo.Api.Services.pdb
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.csproj.AssemblyReference.cache
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.AssemblyInfoInputs.cache
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.AssemblyInfo.cs
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.csproj.CoreCompileInputs.cache
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.csproj.CopyComplete
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\ref\Demo.Api.Data.dll
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.pdb
+C:\Users\wallsilv\Documents\Estudo\Accelerate\DEMOS\API Completa\Demo.Api\src\Demo.Api.Data\obj\Debug\net6.0\Demo.Api.Data.genruntimeconfig.cache
