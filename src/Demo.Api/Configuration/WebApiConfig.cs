@@ -6,12 +6,14 @@ namespace Demo.Api.Configuration;
 
 public static class WebApiConfig
 {
-    public static void AddServices(this IServiceCollection services)
+    public static void AddServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
         services.ResolveDependencies();
+
+        services.AddIdentityConfiguration(configuration);
 
         services.Configure<ApiBehaviorOptions>(options =>
         {

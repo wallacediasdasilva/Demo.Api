@@ -22,7 +22,7 @@ public class ProdutosController : MainController
     }
 
     [HttpGet]
-    public async Task<IActionResult> ObterTodos() 
+    public async Task<IActionResult> ObterTodos()
         => CustomResponse(_mapper.Map<IEnumerable<ProdutoViewModel>>(await _produtoRepository.ObterTodos()));
 
     [HttpGet("{id:guid}")]
@@ -30,7 +30,7 @@ public class ProdutosController : MainController
     {
         var produtoViewModel = await ObterProduto(id);
 
-        if(produtoViewModel is null) return NotFound();
+        if (produtoViewModel is null) return NotFound();
 
         return CustomResponse(produtoViewModel);
     }
@@ -47,6 +47,42 @@ public class ProdutosController : MainController
 
         produtoViewModel.Imagem = imagemPrefixo + produtoViewModel.ImagemUpload.FileName;
         await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
+
+        return CustomResponse(produtoViewModel);
+    }
+
+    [HttpPut("{id:guid}")]
+    public async Task<IActionResult> Atualizar(Guid id, ProdutoViewModel produtoViewModel)
+    {
+        if (id != produtoViewModel.Id)
+        {
+            NotificarErro("O id informado não é o mesmo que foi passado na query");
+
+            CustomResponse(produtoViewModel);
+        }
+
+        var produtoAtualizacao = await ObterProduto(id);
+
+        produtoViewModel.Imagem = produtoAtualizacao.Imagem;
+
+        if (ModelState.IsValid is false) return CustomResponse(ModelState);
+
+        if (produtoViewModel.ImagemUpload is null)
+        {
+            var imagemNome = Guid.NewGuid() + "_" + produtoViewModel.Imagem;
+
+            if (!await UploadArquivo(produtoViewModel.ImagemUpload, imagemNome))
+                return CustomResponse(ModelState);
+
+            produtoAtualizacao.Imagem = imagemNome;
+        }
+
+        produtoAtualizacao.Nome = produtoViewModel.Nome;
+        produtoAtualizacao.Descricao = produtoViewModel.Descricao;
+        produtoAtualizacao.Valor = produtoViewModel.Valor;
+        produtoAtualizacao.Ativo = produtoViewModel.Ativo;
+
+        await _produtoService.Atualizar(_mapper.Map<Produto>(produtoAtualizacao));
 
         return CustomResponse(produtoViewModel);
     }
