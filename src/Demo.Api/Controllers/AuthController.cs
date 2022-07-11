@@ -23,7 +23,9 @@ public class AuthController : MainController
                           UserManager<IdentityUser> userManager,
                           IOptions<AppSettings> appSettings,
                           INotificador notificador,
-                          IMapper mapper) : base(mapper, notificador)
+                          IUser aspNetUser,
+                          IMapper mapper)
+                          : base(notificador, aspNetUser, mapper)
     {
         _signInManager = singInManager;
         _userManager = userManager;

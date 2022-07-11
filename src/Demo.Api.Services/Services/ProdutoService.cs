@@ -1,4 +1,6 @@
 ﻿using Demo.Api.Services.Intefaces;
+using Demo.Api.Services.Intefaces.Repository;
+using Demo.Api.Services.Intefaces.Services;
 using Demo.Api.Services.Models;
 using Demo.Api.Services.Models.Validations;
 

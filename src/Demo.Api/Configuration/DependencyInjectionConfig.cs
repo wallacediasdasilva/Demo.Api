@@ -1,6 +1,9 @@
 ﻿using Demo.Api.Data.Context;
 using Demo.Api.Data.Repository;
+using Demo.Api.Extensions;
 using Demo.Api.Services.Intefaces;
+using Demo.Api.Services.Intefaces.Repository;
+using Demo.Api.Services.Intefaces.Services;
 using Demo.Api.Services.Notificacoes;
 using Demo.Api.Services.Services;
 
@@ -23,6 +26,9 @@ public static class DependencyInjectionConfig
         services.AddScoped<IEnderecoRepository, EnderecoRepository>();
         services.AddScoped<IProdutoRepository, ProdutoRepository>();
         #endregion [ REPOSITORY ]
+
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        services.AddScoped<IUser, AspNetUser>();
 
         return services;
     }

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Demo.Api.Extensions;
 using Demo.Api.Services.Intefaces;
+using Demo.Api.Services.Intefaces.Repository;
+using Demo.Api.Services.Intefaces.Services;
 using Demo.Api.Services.Models;
 using Demo.Api.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +18,9 @@ public class ProdutosController : MainController
     public ProdutosController(IProdutoRepository produtoRepository,
                               IProdutoService produtoService,
                               INotificador notificador,
-                              IMapper mapper) : base(mapper, notificador)
+                              IUser aspNetUser,
+                              IMapper mapper)
+                              : base(notificador, aspNetUser, mapper)
     {
         _produtoRepository = produtoRepository;
         _produtoService = produtoService;

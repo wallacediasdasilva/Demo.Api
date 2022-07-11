@@ -28,6 +28,10 @@ public static class WebApiConfig
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        else
+        {
+            app.UseHsts();
+        }
 
         app.UseHttpsRedirection();
 

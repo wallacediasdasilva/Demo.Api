@@ -10,13 +10,25 @@ namespace Demo.Api.Controllers;
 public abstract class MainController : ControllerBase
 {
     private readonly INotificador _notificador;
+    public readonly IUser _aspNetUser;
     protected readonly IMapper _mapper;
 
-    protected MainController(IMapper mapper,
-                             INotificador notificador)
+    protected Guid UsuarioId { get; set; }
+    protected bool UsuarioAutenticado { get; set; }
+
+    protected MainController(INotificador notificador,
+                             IUser aspNetUser,
+                             IMapper mapper)
     {
         _mapper = mapper;
         _notificador = notificador;
+        _aspNetUser = aspNetUser;
+
+        if (_aspNetUser.IsAuthenticated())
+        {
+            UsuarioId = _aspNetUser.GetUserId();
+            UsuarioAutenticado = true;
+        }
     }
 
     protected bool OperacaoEhValida()

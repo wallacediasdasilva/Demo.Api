@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using Demo.Api.Services.Models;
 
-namespace Demo.Api.Services.Intefaces;
+namespace Demo.Api.Services.Intefaces.Repository;
 
 public interface IRepository<TEntity> : IDisposable where TEntity : Entity
 {

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Demo.Api.Extensions;
 using Demo.Api.Services.Intefaces;
+using Demo.Api.Services.Intefaces.Repository;
+using Demo.Api.Services.Intefaces.Services;
 using Demo.Api.Services.Models;
 using Demo.Api.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -20,8 +22,9 @@ public class FornecedoresController : MainController
                                   IEnderecoRepository enderecoRepository,
                                   IFornecedorService fornecedorService,
                                   INotificador notificador,
+                                  IUser aspNetUser,
                                   IMapper mapper)
-                                  : base(mapper, notificador)
+                                  : base(notificador, aspNetUser, mapper)
     {
         _fornecedorRepository = fornecedorRepository;
         _enderecoRepository = enderecoRepository;

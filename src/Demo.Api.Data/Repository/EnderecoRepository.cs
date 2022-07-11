@@ -1,5 +1,5 @@
 ﻿using Demo.Api.Data.Context;
-using Demo.Api.Services.Intefaces;
+using Demo.Api.Services.Intefaces.Repository;
 using Demo.Api.Services.Models;
 using Microsoft.EntityFrameworkCore;
 

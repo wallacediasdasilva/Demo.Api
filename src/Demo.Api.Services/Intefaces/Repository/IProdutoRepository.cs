@@ -1,6 +1,6 @@
 ﻿using Demo.Api.Services.Models;
 
-namespace Demo.Api.Services.Intefaces;
+namespace Demo.Api.Services.Intefaces.Repository;
 
 public interface IProdutoRepository : IRepository<Produto>
 {
