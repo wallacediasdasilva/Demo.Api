@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Demo.Api.Extensions;
 using Demo.Api.Services.Intefaces;
 using Demo.Api.Services.Models;
 using Demo.Api.ViewModels;
@@ -35,6 +36,7 @@ public class ProdutosController : MainController
         return CustomResponse(produtoViewModel);
     }
 
+    [ClaimsAuthorize("Produto", "Adicionar")]
     [HttpPost]
     public async Task<IActionResult> Adicionar(ProdutoViewModel produtoViewModel)
     {
@@ -51,6 +53,7 @@ public class ProdutosController : MainController
         return CustomResponse(produtoViewModel);
     }
 
+    [ClaimsAuthorize("Produto", "Atualizar")]
     [HttpPut("{id:guid}")]
     public async Task<IActionResult> Atualizar(Guid id, ProdutoViewModel produtoViewModel)
     {
@@ -87,9 +90,9 @@ public class ProdutosController : MainController
         return CustomResponse(produtoViewModel);
     }
 
-
+    [ClaimsAuthorize("Produto", "Excluir")]
     [HttpDelete("{id:guid}")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Excluir(Guid id)
     {
         var produtoViewModel = await ObterProduto(id);
 

@@ -77,7 +77,7 @@ public class AuthController : MainController
         return CustomResponse(loginUser);
     }
 
-    private async Task<string> GerarJwt(string email)
+    private async Task<LoginResponseViewModel> GerarJwt(string email)
     {
         var user = await _userManager.FindByEmailAsync(email);
         var claims = await _userManager.GetClaimsAsync(user);
@@ -107,7 +107,17 @@ public class AuthController : MainController
         });
 
         var encodedToken = tokenHandler.WriteToken(token);
-        return encodedToken;
+        return new LoginResponseViewModel
+        {
+            AccessToken = encodedToken,
+            ExpiresIn = TimeSpan.FromHours(_appSettings.ExpiracaoEmHoras).TotalSeconds,
+            UserToken = new UserTokenViewModel
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Claims = claims.Select(e => new ClaimViewModel { Type = e.Type, Value = e.Value})
+            }
+        };
     }
 
     private static long ToUnixEpochDate(DateTime date)
