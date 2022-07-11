@@ -2,10 +2,12 @@
 using Demo.Api.Services.Intefaces;
 using Demo.Api.Services.Models;
 using Demo.Api.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Api.Controllers;
 
+[Authorize]
 [Route("api/[controller]")]
 public class FornecedoresController : MainController
 {
@@ -25,6 +27,8 @@ public class FornecedoresController : MainController
         _fornecedorService = fornecedorService;
     }
 
+
+    [AllowAnonymous]
     [HttpGet]
     public async Task<IActionResult> ObterTodos() => Ok(_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()));
 
