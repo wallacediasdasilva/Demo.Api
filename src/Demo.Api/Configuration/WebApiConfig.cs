@@ -1,6 +1,5 @@
 ﻿using Demo.Api.Data.Context;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demo.Api.Configuration;
@@ -19,6 +18,9 @@ public static class WebApiConfig
 
         services.AddSwaggerConfig();
 
+        services.AddHealthChecks()
+                .AddSqlServer(configuration.GetConnectionString("ORM"), name: "Banco SQL");
+
         services.Configure<ApiBehaviorOptions>(options =>
         {
             options.SuppressModelStateInvalidFilter = true;
@@ -35,6 +37,8 @@ public static class WebApiConfig
 
         app.UseAuthentication();
         app.UseAuthorization();
+
+        app.UseHealthChecks("/api/hc");
 
         app.MapControllers();
 

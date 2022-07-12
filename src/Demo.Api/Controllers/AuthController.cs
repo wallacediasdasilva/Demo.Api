@@ -18,10 +18,12 @@ public class AuthController : MainController
     private readonly SignInManager<IdentityUser> _signInManager;
     private readonly UserManager<IdentityUser> _userManager;
     private readonly AppSettings _appSettings;
+    private readonly ILogger _logger;
 
     public AuthController(SignInManager<IdentityUser> singInManager,
                           UserManager<IdentityUser> userManager,
                           IOptions<AppSettings> appSettings,
+                          ILogger<AuthController> logger,
                           INotificador notificador,
                           IUser aspNetUser,
                           IMapper mapper)
@@ -30,6 +32,7 @@ public class AuthController : MainController
         _signInManager = singInManager;
         _userManager = userManager;
         _appSettings = appSettings.Value;
+        _logger = logger;
     }
 
     [HttpPost("nova-conta")]
@@ -67,6 +70,7 @@ public class AuthController : MainController
 
         if (result.Succeeded)
         {
+            _logger.LogInformation($"Usuario {loginUser.Email} logado com sucesso!");
             return CustomResponse(await GerarJwt(loginUser.Email));
         }
         if (result.IsLockedOut)
