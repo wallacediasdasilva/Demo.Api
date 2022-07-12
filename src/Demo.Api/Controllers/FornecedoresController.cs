@@ -7,6 +7,8 @@ using Demo.Api.Services.Models;
 using Demo.Api.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
+using System.Net;
 
 namespace Demo.Api.Controllers;
 
@@ -31,7 +33,7 @@ public class FornecedoresController : MainController
         _fornecedorService = fornecedorService;
     }
 
-    [HttpGet]
+    [HttpGet, Authorize]
     public async Task<IActionResult> ObterTodos() => Ok(_mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos()));
 
     [HttpGet("{id:guid}")]

@@ -1,5 +1,6 @@
 ﻿using Demo.Api.Data.Context;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demo.Api.Configuration;
@@ -10,10 +11,13 @@ public static class WebApiConfig
     {
         services.AddControllers();
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+
+
         services.ResolveDependencies();
 
         services.AddIdentityConfiguration(configuration);
+
+        services.AddSwaggerConfig();
 
         services.Configure<ApiBehaviorOptions>(options =>
         {
@@ -23,18 +27,13 @@ public static class WebApiConfig
 
     public static void UseServices(this WebApplication app)
     {
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
-        else
-        {
+        if (!app.Environment.IsDevelopment())
             app.UseHsts();
-        }
 
+        app.UseSwaggerConfig();
         app.UseHttpsRedirection();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllers();

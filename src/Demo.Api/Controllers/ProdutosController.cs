@@ -5,10 +5,12 @@ using Demo.Api.Services.Intefaces.Repository;
 using Demo.Api.Services.Intefaces.Services;
 using Demo.Api.Services.Models;
 using Demo.Api.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Api.Controllers;
 
+[Authorize]
 [Route("api/[controller]")]
 public class ProdutosController : MainController
 {
